@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
 //imported router available here
 app.use("/api/note", noteRouter)
 
-app.listen(port, () => {
-    console.log(`App is running listening at https://localhost:${port}`);
-})
+app.listen(process.env.PORT || 5000, () => {
+    console.log(`http://localhost:${process.env.PORT || 5000}`);
+  });
+  
